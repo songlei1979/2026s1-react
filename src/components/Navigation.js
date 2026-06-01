@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import {Nav} from "react-bootstrap";
+import Login from "./Login";
 
 function Navigation(props) {
     return (
@@ -25,6 +26,9 @@ function Navigation(props) {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link href="/register">Register</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/login">Login</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link eventKey="disabled" disabled>

@@ -13,6 +13,7 @@ import Counter from "./components/Counter";
 import Loadposts from "./components/Loadposts";
 import CountReducer from "./components/Count_reducer";
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 function App() {
     function clickMe() {
@@ -34,6 +35,7 @@ function App() {
                     <Route path="/loadposts" element={<Loadposts/>}/>
                     <Route path="/countreducer" element={<CountReducer/>}/>
                     <Route path="/register" element={<Register/>}/>
+                    <Route path="/login" element={<Login/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
