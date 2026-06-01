@@ -42,18 +42,42 @@ function Login(props) {
         axios.request(config)
             .then((response) => {
                 console.log(JSON.stringify(response.data.token));
-                setToken(response.data.token)
-                localStorage.setItem("token", response.data.token)
+                setToken(response.data.token);
+                localStorage.setItem("token", response.data.token);
+                window.location.reload();
             })
             .catch((error) => {
                 setError("Wrong username and password")
             });
     }
 
+    function logout() {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:8000/auth/logout/',
+            headers: {
+                'Authorization': 'token '+token
+            }
+        };
+
+        axios.request(config)
+            .then((response) => {
+                console.log(JSON.stringify(response.data));
+                setToken("");
+                setIsLogin(false);
+                localStorage.removeItem("token");
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     return (
         isLogin ?
             <div>
-                <button>Logout</button>
+                <button onClick={logout}>Logout</button>
             </div> :
             <div>
                 <p>Username: <input type="text" onChange={usernameHandler}/></p>

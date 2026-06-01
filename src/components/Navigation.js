@@ -31,6 +31,9 @@ function Navigation(props) {
                     <Nav.Link href="/login">Login</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
+                    <Nav.Link href="/postlist">Posts</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
                     <Nav.Link eventKey="disabled" disabled>
                         Disabled
                     </Nav.Link>
