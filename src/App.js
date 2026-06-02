@@ -15,6 +15,7 @@ import CountReducer from "./components/Count_reducer";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import PostList from "./components/post_list";
+import PostUpdate from "./components/Post_update";
 
 function App() {
     function clickMe() {
@@ -38,6 +39,7 @@ function App() {
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/postlist" element={<PostList/>}/>
+                    <Route path="/postupdate" element={<PostUpdate/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

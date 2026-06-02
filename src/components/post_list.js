@@ -11,7 +11,6 @@ function PostList(props) {
             console.log("token exists")
             console.log(localStorage.getItem("token"))
             setToken(localStorage.getItem("token"))
-
         } else {
             window.location.href = "/login"
         }
