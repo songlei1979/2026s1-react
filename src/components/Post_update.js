@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import base_url from "../constraints";
 
 function PostUpdate(props) {
     const [post, setPost] = useState({});
@@ -45,7 +46,7 @@ function PostUpdate(props) {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://127.0.0.1:8000/posts_router/2',
+            url: base_url+'/posts_router/2',
             headers: {
                 'Authorization': 'token ' + token
             }
